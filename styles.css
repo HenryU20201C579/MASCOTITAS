@@ -96,6 +96,11 @@ ion-icon {
     background-color: inherit;
 }
 
+#logo2{
+    height: 50px;
+    width: 150px;
+}
+
 button {
     border: none;
     cursor: pointer;
@@ -134,6 +139,7 @@ body.active { overflow-y: hidden; }
     background: var(--default);
     z-index: 4;
     padding-block: 24px;
+    background-color: #e0fac0;
 }
 
 .header .container {
