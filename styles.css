@@ -125,10 +125,17 @@ body.active { overflow-y: hidden; }
 .btn-green { 
     border-radius: 2px;
     background-color: var(--limegreen04) !important;
+   
 }
 
+#footerF
+{
+    border-top: 1px solid black;
+}
 
-
+section .started-content{
+    background-color: var(--limegreen04) !important;
+}
 
 /* HEADER */
 .header {
