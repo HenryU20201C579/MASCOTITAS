@@ -1,2 +1,11 @@
 com\example\demo\DemoApplication.class
-duenio\duenio.class
+model\Mascota.class
+model\Veterinaria.class
+model\Veterinarios.class
+model\Examenes.class
+model\Citas.class
+CustomController\CustomController.class
+model\Historial_medico.class
+model\Login.class
+model\Especialidad.class
+model\Duenio.class
