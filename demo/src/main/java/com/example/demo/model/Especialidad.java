@@ -21,6 +21,9 @@ public class Especialidad {
     @JoinColumn(name = "id_veterinarios")
     private Veterinarios veterinarios;
 
+    public Especialidad() {
+    }
+
     public Especialidad(String titulo, String descripcion, Veterinarios veterinarios) {
         Titulo = titulo;
         Descripcion = descripcion;

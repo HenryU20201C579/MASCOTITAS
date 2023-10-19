@@ -28,6 +28,9 @@ public class Duenio {
     @JoinColumn(name = "id_login")
     private Login login;
 
+    public Duenio() {
+    }
+
     public Duenio(String nombres, String apellido, int edad, String direccion, String correo, int num_telefono, int dNI,
             int cantidad_Mascota, Login login) {
         Nombres = nombres;

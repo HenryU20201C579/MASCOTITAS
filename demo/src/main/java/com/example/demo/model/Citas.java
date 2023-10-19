@@ -22,13 +22,16 @@ public class Citas {
     @JoinColumn(name = "id_veterinaria")
     private Veterinaria veterinaria;
     
+    public Citas() {
+    }
+    
     public Citas(int fecha, int hora, String consulta, Veterinaria veterinaria) {
         Fecha = fecha;
         Hora = hora;
         Consulta = consulta;
         this.veterinaria = veterinaria;
     }
-    
+
     public int getId_Citas() {
         return id_Citas;
     }

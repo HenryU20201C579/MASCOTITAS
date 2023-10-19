@@ -24,7 +24,10 @@ public class Veterinaria {
     @ManyToOne
     @JoinColumn(name = "id_veterinarios")
     private Veterinarios veterinarios;
-    
+
+    public Veterinaria() {
+    }
+
     public Veterinaria(String nombre, String direccion, String descripcion, Historial_medico historial_medico,
             Veterinarios veterinarios) {
         Nombre = nombre;

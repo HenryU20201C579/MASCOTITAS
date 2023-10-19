@@ -20,6 +20,9 @@ public class Mascota {
     @JoinColumn(name = "id_duenio")
     private Duenio duenio;
 
+    public Mascota() {
+    }
+
     public Mascota(String nombre, int edad, String raza, String especie, Duenio duenio) {
         Nombre = nombre;
         Edad = edad;

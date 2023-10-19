@@ -15,6 +15,9 @@ public class Veterinarios {
     private String Nombre;
     private String Apellido;
 
+    public Veterinarios() {
+    }
+
     public Veterinarios(String nombre, String apellido) {
         Nombre = nombre;
         Apellido = apellido;

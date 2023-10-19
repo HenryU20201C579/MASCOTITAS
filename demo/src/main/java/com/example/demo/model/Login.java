@@ -14,7 +14,10 @@ public class Login {
     private int id_Login;
     private String Usuario;
     private String Contrasenia;
- 
+
+    public Login() {
+    }
+
     public Login(String usuario, String contrasenia) {
         Usuario = usuario;
         Contrasenia = contrasenia;

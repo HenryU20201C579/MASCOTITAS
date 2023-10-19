@@ -11,16 +11,19 @@ import jakarta.persistence.Table;
 @Entity
 @Table (name = "examenes")
 public class Examenes {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_Examen;
     private String Exam_realizado;
     private String Resultado;
-
+    
     @ManyToOne
     @JoinColumn(name = "id_citas")
     private Citas citas;
-
+    
+    public Examenes() {
+    }
 
     public Examenes(String exam_realizado, String resultado, Citas citas) {
         Exam_realizado = exam_realizado;
