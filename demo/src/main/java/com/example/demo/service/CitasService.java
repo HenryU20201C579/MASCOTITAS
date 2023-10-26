@@ -202,7 +202,7 @@ public class CitasService implements CitasRepository{
 
     @Override
     public <S extends Citas> List<S> findAll(Example<S> example) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
     
