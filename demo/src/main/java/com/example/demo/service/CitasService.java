@@ -19,7 +19,7 @@ import com.example.demo.repository.CitasRepository;
 public class CitasService implements CitasRepository{
 
     @Autowired
-    private CitasRepository citasRepository;
+    public CitasRepository citasRepository;
 
     @Override
     public void flush() {
@@ -76,10 +76,8 @@ public class CitasService implements CitasRepository{
     }
 
     @Override
-    public <S extends Citas> List<S> findAll(Example<S> example) {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
-
+    public List<Citas> findAll() {
+        return citasRepository.findAll();
     }
 
     @Override
@@ -88,11 +86,11 @@ public class CitasService implements CitasRepository{
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
 
-    @Override
-    public List<Citas> findAll() {
+    // @Override
+    // public List<Citas> findAll() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
-    }
+    //     throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+    // }
 
     @Override
     public List<Citas> findAllById(Iterable<Long> ids) {
@@ -200,6 +198,12 @@ public class CitasService implements CitasRepository{
     public <S extends Citas> Optional<S> findOne(Example<S> example) {
         
         throw new UnsupportedOperationException("Unimplemented method 'findOne'");
+    }
+
+    @Override
+    public <S extends Citas> List<S> findAll(Example<S> example) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
     
 }

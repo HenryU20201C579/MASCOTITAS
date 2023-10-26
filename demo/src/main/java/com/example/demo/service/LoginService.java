@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.model.Citas;
 import com.example.demo.model.Login;
 import com.example.demo.repository.LoginRepository;
 
@@ -76,6 +77,11 @@ public class LoginService implements LoginRepository{
     }
 
     @Override
+    public List<Login> findAll() {
+        return loginRepository.findAll();
+    }
+
+    @Override
     public <S extends Login> List<S> findAll(Example<S> example) {
         
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
@@ -93,11 +99,7 @@ public class LoginService implements LoginRepository{
         throw new UnsupportedOperationException("Unimplemented method 'saveAll'");
     }
 
-    @Override
-    public List<Login> findAll() {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
-    }
+    
 
     @Override
     public List<Login> findAllById(Iterable<Long> ids) {
