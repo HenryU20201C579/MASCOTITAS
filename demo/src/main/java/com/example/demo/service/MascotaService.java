@@ -21,6 +21,13 @@ public class MascotaService implements MascotaRepository{
     @Autowired
     private MascotaRepository mascotaRepository;
 
+    public void agregarMascota(Mascota nuevaMascota) {
+
+
+        mascotaRepository.save(nuevaMascota);
+        //listaDeMascotas.add(nuevaMascota);
+    }
+
     @Override
     public void flush() {
         
@@ -96,7 +103,7 @@ public class MascotaService implements MascotaRepository{
     @Override
     public List<Mascota> findAll() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return mascotaRepository.findAll();
     }
 
     @Override

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
@@ -75,6 +76,12 @@ public class DuenioService implements DuenioRepository{
         throw new UnsupportedOperationException("Unimplemented method 'getReferenceById'");
     }
 
+
+    @Override
+    public List<Duenio> findAll() {
+        return duenioRepository.findAll();
+    }
+
     @Override
     public <S extends Duenio> List<S> findAll(Example<S> example) {
         
@@ -93,11 +100,11 @@ public class DuenioService implements DuenioRepository{
         throw new UnsupportedOperationException("Unimplemented method 'saveAll'");
     }
 
-    @Override
-    public List<Duenio> findAll() {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
-    }
+    //@Override
+   // public List<Duenio> findAll() {
+    //
+    //    throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+    //}
 
     @Override
     public List<Duenio> findAllById(Iterable<Long> ids) {

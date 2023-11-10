@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+import com.example.demo.model.Mascota;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
@@ -20,7 +22,17 @@ public class VeterinariosService implements VeterinariosRepository{
 
     @Autowired
     private VeterinariosRepository veterinariosRepository;
-    
+
+
+    //@Transactional
+    public void agregarVeterinario(Veterinarios nuevaVeterinario) {
+
+
+        veterinariosRepository.save(nuevaVeterinario);
+
+    }
+
+
     @Override
     public void flush() {
         
@@ -96,7 +108,7 @@ public class VeterinariosService implements VeterinariosRepository{
     @Override
     public List<Veterinarios> findAll() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return veterinariosRepository.findAll();
     }
 
     @Override

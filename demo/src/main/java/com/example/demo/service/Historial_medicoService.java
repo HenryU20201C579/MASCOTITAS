@@ -96,7 +96,7 @@ public class Historial_medicoService implements Historial_medicoRepository{
     @Override
     public List<Historial_medico> findAll() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return historial_medicoRepository.findAll();
     }
 
     @Override

@@ -96,7 +96,7 @@ public class VeterinariaService implements VeterinariaRepository {
     @Override
     public List<Veterinaria> findAll() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return veterinariaRepository.findAll();
     }
 
     @Override

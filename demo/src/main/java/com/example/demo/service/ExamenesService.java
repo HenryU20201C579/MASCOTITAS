@@ -94,8 +94,9 @@ public class ExamenesService implements ExamenesRepository{
 
     @Override
     public List<Examenes> findAll() {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+
+        return examenesRepository.findAll();
+
     }
 
     @Override

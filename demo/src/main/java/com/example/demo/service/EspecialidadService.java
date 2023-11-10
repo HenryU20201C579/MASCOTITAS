@@ -19,7 +19,7 @@ import com.example.demo.repository.EspecialidadRepository;
 public class EspecialidadService implements EspecialidadRepository{
 
     @Autowired
-    private EspecialidadRepository EspecialidadRepository;
+    private EspecialidadRepository especialidadRepository;
     @Override
     public void flush() {
         
@@ -95,7 +95,7 @@ public class EspecialidadService implements EspecialidadRepository{
     @Override
     public List<Especialidad> findAll() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return especialidadRepository.findAll();
     }
 
     @Override
