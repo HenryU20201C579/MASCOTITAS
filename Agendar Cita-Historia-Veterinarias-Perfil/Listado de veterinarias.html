@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listado de Veterinarias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  <style>
+        body {
+            background: linear-gradient(to right, #d9d9d9, rgb(255, 255, 255));
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e0fac0;">
+            <div class="container">
+                <a href="#" class="navbar-brand" style="color: black;">
+                    <strong>+COTITAS</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarHeader">
+                    <ul class="navbar-nav me-auto nd-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="color: black;">Mis mascotas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="color: black;">Reservar Cita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="color: black;">Cuidados</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <h2 class="fw-bold text-center mb-5">Elige entre nuestras distintas veterinarias asociadas</h2>
+
+        <p class="text-center"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5"></path>
+            </svg> Busqueda avanzada</p>
+
+        <div class="row align-items-start">
+            <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Ubicación</option>
+                    <option value="1">Surco</option>
+                    <option value="2">Miraflores</option>
+                    <option value="3">Surquillo</option>
+                    <option value="4">San Borja</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Calificación</option>
+                    <option value="1">3,5 - 4 &#11088;</option>
+                    <option value="2">4 - 4,5 &#11088;</option>
+                    <option value="3">4,5 - 5 &#11088;</option>
+                </select>
+            </div>
+        </div>
+        <br>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4" >
+            <!-- Tarjeta 1 -->
+            <div class="col " >
+                <div class="card h-100" style="background-color: #e0fac0;user-select: text;">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <img src="images/hachis pets logo.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="hachi pets logo">
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleFavorite(this)">&#11088;</button>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Veterinaria Hachi Pets</h5>
+                            <p class="card-text">Ubicación: Santiago de Surco</p>
+                            <p class="card-text">Calificación: 4,7 &#11088;</p>
+                            <button type="button" class="btn btn-outline-success btn-sm">Registrar cita</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card h-100" style="background-color: #e0fac0;user-select: text;">
+                    <a href="Perfil.html" class="list-group-item list-group-item-action active" aria-current="true">
+                        <img src="images/mar de colas logo.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="mar de colas logo">
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleFavorite(this)">&#11088;</button>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Veterinaria Mar de Colas</h5>
+                            <p class="card-text">Ubicación: Miraflores</p>
+                            <p class="card-text">Calificación: 4,5 &#11088;</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card h-100" style="background-color: #e0fac0;user-select: text;">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <img src="images/veterinaria groomers logo.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="groomers logo">
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleFavorite(this)">&#11088;</button>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Clínica Veterinaria Groomers</h5>
+                            <p class="card-text">Ubicación: Miraflores</p>
+                            <p class="card-text">Calificación: 4,3 &#11088;</p>
+ 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card h-100" style="background-color: #e0fac0;user-select: text;">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <img src="images/puntovet logo.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="puntovet logo">
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleFavorite(this)">&#11088;</button>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Clínica Veterinaria Puntovet</h5>
+                            <p class="card-text">Ubicación: Surquillo</p>
+                            <p class="card-text">Calificación: 4,4 &#11088;</p>
+ 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 5 -->
+            <div class="col">
+                <div class="card h-100" style="background-color: #e0fac0;user-select: text;">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <img src="images/polovet.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="polovet logo">
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleFavorite(this)">&#11088;</button>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Clínica Veterinaria Polovet</h5>
+                            <p class="card-text">Ubicación: San Borja</p>
+                            <p class="card-text">Calificación: 4,4 &#11088;</p>
+ 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Tarjeta 6 -->
+            <div class="col">
+                <div class="card h-100" style="background-color: #e0fac0; user-select: text;">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        <img src="images/elpolo.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="elpolo logo">
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleFavorite(this)">&#11088;</button>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Clínica Veterinaria Mascotas El Polo</h5>
+                            <p class="card-text">Ubicación: San Borja</p>
+                            <p class="card-text">Calificación: 4,1 &#11088;</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+        function toggleFavorite(button) {
+            $(button).toggleClass("btn-outline-success btn-success");
+        }
+    </script>
+</body>
+
+</html>
